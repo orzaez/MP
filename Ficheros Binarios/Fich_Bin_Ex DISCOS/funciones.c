@@ -48,7 +48,7 @@ int incrementarUnidades (char * nF,int codigo, int  unidades){
 
     while(fread(&d,sizeof(struct disco),1,fich)==1){
         if (codigo==d.cod){
-            d.unidades=unidades;
+            d.unidades+=unidades;
             fseek(fich,-1*sizeof(struct disco),SEEK_CUR);
             fwrite(&d,sizeof(struct disco),1,fich);
             modificado =1;

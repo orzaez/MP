@@ -37,6 +37,7 @@ int main (char argc, char ** argv){
         printf ("Introduzca el nombre del disco:");
         getchar();//Quita un ultimo caracter en este caso 
         fgets(d.nombre,50,stdin);//NO genera ENTER
+        //eliminar el /n con strlen
 
         printf ("Introduzca el autor del disco:");
         fgets(d.autor,50,stdin);
@@ -57,14 +58,13 @@ int main (char argc, char ** argv){
         int v = incrementarUnidades(nF,d.cod,d.unidades);
         if (v == 1){
             printf("Se han añadido: %i\n", d.unidades);
+        
 
         }else{
             printf("No se ha podido encontrar el producto.");
 
         }
-        printf("%i",incrementarUnidades(nF,d.cod,d.unidades));
         break;
-
     }
     
     return 0;
