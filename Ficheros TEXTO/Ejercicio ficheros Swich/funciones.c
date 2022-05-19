@@ -129,7 +129,7 @@ int borrarProducto(char * nF, char * codigo){
     struct producto p;
     int borrado=0;
     while (fscanf(fich,"%s %f %i\n", p.codigo, &p.precio, &p.unidades)==3){
-        if (strcmp(codigo,p.codigo)!=0){//NO ENTIENDO LO DE DISTINTO
+        if (strcmp(codigo,p.codigo)!=0){//PONES DISTINTOS PORQUE GUARDAS EN EL FICHERO 2 TODOS LOS DATOS MENOS EL ENCOTRADO
             fprintf (fich2, "%s %f %i\n", p.codigo, p.precio, p.unidades);
             //printf ("%i", borrado);
         }else{

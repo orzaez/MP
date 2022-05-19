@@ -1,7 +1,5 @@
 #include "funciones.h"
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
+
 int contarRegistros(char * nF){
 
     FILE * fich = fopen(nF, "r");
@@ -12,9 +10,16 @@ int contarRegistros(char * nF){
     long dni;
     float nota1, nota2, nota3;
     int cont=0;
-    while (fscanf(fich, "%ld %f %f %f", &dni, &nota1, &nota2, &nota3)==4){
+    /*while (fscanf(fich, "%ld %f %f %f", &dni, &nota1, &nota2, &nota3)==4){
         cont ++;
+    }*/
+    struct alumno a;
+    while(fgets(a.nombre,1000,fich)){
+        a.nombre[strlen(a.nombre)-1]='\0';
+        fscanf(fich,"%ld\n",&a.dni);
+        cont++;
     }
+
     fclose(fich);
     
     return cont;
@@ -60,7 +65,7 @@ void fichero_a_vector(char * nF, char * nF1, struct alumno * v){
         fscanf(fich, "%ld\n", &a.dni);//Leo el fichero1 especial PONGO /N PORQUE HAY FGETS Y SI SIEMPRE SE PONE 
         fscanf(fich1, "%ld %f %f %f", &a.dni, &nota1, &nota2, &nota3);
         a.media = (nota1+nota2+nota3)/3;
-        printf("%f",a.media);
+        printf("%f\n",a.media);
         v[i]=a;//LA A LLEVA UN DNI NOTA1 NOTA2 NOTA3;
         i++;
     }

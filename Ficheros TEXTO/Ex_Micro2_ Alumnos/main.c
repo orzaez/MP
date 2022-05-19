@@ -18,8 +18,8 @@ int main(int argc, char **argv){
     char * nF3 = argv[3];
 
     //CONTAR FICHEROS CON EL DE NOTAS PORQUE ES EL MAS FACIL f2
-    int tam = contarRegistros (nF3);
-    printf("%d", tam);
+    int tam = contarRegistros (nF);
+    printf("%i\n", tam);
 
    //CREO EL VECTOR
     struct alumno * v = NULL;

@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "funciones.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "string.h": "c",
+        "fichero.h": "c"
     }
 }

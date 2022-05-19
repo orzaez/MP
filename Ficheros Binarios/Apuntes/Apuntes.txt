@@ -1,3 +1,0 @@
--Cuando tenga un fichero binario OBLIGATORIAMENTE tengo que tener STRUCT y ese STRUCT SIEMPRE NOS LO DAN.
--3 MODOS DE APERTURA: rb, wb, ab.
-- En lugar de un fprintf se usa --> fwrite y en lugar de fscanf ---> fread.
