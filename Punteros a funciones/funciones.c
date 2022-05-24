@@ -12,6 +12,7 @@ void ordenar (struct persona * v, int tam, int (*nombreFuncion)(struct persona a
                 v[j]=aux
             }
         }
+
     }
 }
 //en el main NOS LO DA
