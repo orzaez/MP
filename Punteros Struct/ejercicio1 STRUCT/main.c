@@ -18,4 +18,6 @@ int main(int argc, char **agrv ){
     buscarAlumno(v,tam,&dni);
     liberaMemoria(&v);
     return 0;
+    
+
 }
