@@ -3,6 +3,7 @@
   struct nodo {
         int dato;//cabeza
         struct nodo * sig;//Flecha
+        int sig;
     };
     
 struct nodo * nuevoElemento();
