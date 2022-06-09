@@ -1,0 +1,10 @@
+En este ejercicio si programarás tu todo, desde el main a la definición y desarrollo de las 
+funciones necesarias.
+
+Deberás desarrollar un programa que reciba por línea de argumentos obligatoriamente el tamaño
+de un vector de enteros.
+
+    - Rellenar el vector usando memoria dinámica.
+    - Mostrar el vector rellenado.
+    - Mostrar el vector de forma inversa usando recursividad.
+    - Calcular tanto el menor como el mayor del vector de forma recursivad.

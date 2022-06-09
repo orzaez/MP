@@ -43,8 +43,6 @@ void mostrarLista(struct nodo * cabeza){
         printf ("Nombre: %s", (aux -> dato).nombre);
         printf (" Edad: %d", (aux -> dato).edad);
         printf (" Nota: %f\n", (aux -> dato).nota);
-
-
         aux = aux -> sig;
     }
     
