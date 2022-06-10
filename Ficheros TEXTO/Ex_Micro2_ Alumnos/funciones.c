@@ -20,8 +20,7 @@ int contarRegistros(char * nF){
         cont++;
     }
 
-    fclose(fich);
-    
+    fclose(fich);   
     return cont;
 }
 
