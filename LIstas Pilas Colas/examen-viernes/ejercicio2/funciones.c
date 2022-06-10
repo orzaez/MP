@@ -12,7 +12,6 @@
 
 void apartado1(int * tam1, int * tam2, struct dato * VECTOR, int NUMELEMENTOS, struct lista ** LISTA1,  struct lista ** LISTA2, float PESO){
     vector_a_lista(LISTA1,LISTA2,VECTOR,NUMELEMENTOS,PESO,tam1,tam2);
-    //int cont = contarelementos(*LISTA);
     //NO OLVIDES CAMBIAR EL RETURN
     //return cont;
 }
