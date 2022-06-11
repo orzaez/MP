@@ -23,40 +23,68 @@
 int ejercicio3(int nEle1, int nEle2, struct datos* A1, struct datos* A2, struct lista ** LS)
 {
   //INCLUYE AQUI EL CODIGO NECESARIO PARA RESOLVER EL EJERCICIO
-	
+	vector_a_lista(nEle1,nEle2,A1,A2,LS);
+  int cont =0;
+  cont=contarElementos(*LS);
+  return cont;
   //RECUERDA HACER EL RETURN
 
 }
-
 //ESCRIBE AQU� TODAS LAS FUNCIONES QUE CONSIDERES NECESARIAS
 void vector_a_lista(int nEle1, int nEle2, struct datos* A1, struct datos* A2, struct lista ** LS){
-    for(int i=0;i<NUMELEMENTOS;i++){
-        if(A1.nota>=9){
-            insertarDelante(LS,vector[i]);
+  for (int i =0; i<nEle1; i++){
+    //insertarDelante(LP,C1[i]);
+    if (A[i].nota>=9){
+    insertarDelante(LS,A1[i]);
+
+    }
+
+  }
+  for (int i =0; i<nEle1; i++){
+    int encontrado = buscarLista(*LS, A2[i].codigo);
+    if (A[i].nota>=9){
+        if (encontrado == 0){
+            insertarDelante(LS,A2[i]);
         }
     }
-	for(int i=0;i<NUMELEMENTOS;i++){
-        if(A2.nota>=9){
-            insertarDelante(LS,vector[i]);
-        }
-    }
+  }
 }
-void insertarDelante(struct lista **LS,struct dato VECTOR){
-    struct lista *nuevo=nuevoElemento();
-    nuevo->codigo=VECTOR;
-    if((*LS)==NULL){
+struct lista * nuevoElemento(){
+    struct lista * nuevo = NULL;
+    nuevo = (struct lista*)malloc(sizeof(struct lista));
+    if (nuevo == NULL){
+        printf("Eerro");
+        exit (-1);
+    }
+    return nuevo;
+}
+int buscarLista(struct lista *LS, int codigo){
+    struct lista * aux = LS;
+    while(aux!=NULL){
+        if (aux -> codigo == codigo){
+            return 1;
+        }
+        aux= aux-> sig;
+    }
+    return 0;
+}
+void insertarDelante(struct lista ** LS, struct datos  v){
+    struct lista * nuevo = nuevoElemento();
+    nuevo -> codigo = v.codigo;
+    strcpy(nuevo->nombre, v.nombre);
+    if ((*LS)==NULL){
         nuevo->sig=NULL;
     }else{
         nuevo->sig=(*LS);
     }
     (*LS)=nuevo;
 }
-struct lista * nuevoElemento(){//ESTA FUNCION ES LA MISMA PARA TODOS LOS CASOS
-    struct lista * nuevo = NULL;
-    nuevo = (struct lista *)malloc(sizeof(struct lista));//reservo memoria para ese struct * nodo SOLO PARA 1
-    if (nuevo==NULL){
-        printf("Error al reservar memoria");
-        exit(-1);
+int contarElementos(struct lista * LS){
+    int cont =0;
+    struct lista * aux = LS;
+    while(aux!=NULL){
+        cont++;
+        aux=aux->sig;
     }
-    return nuevo;
+    return cont;
 }

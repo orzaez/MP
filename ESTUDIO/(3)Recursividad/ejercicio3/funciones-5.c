@@ -8,19 +8,18 @@
 
 
 /*------------------------------------------------------------------*/
-/*Ejercicio 3: Listas
-  -nEle1, nEle2: El número de elementos de los vectores C1 y C2 respectivamente
-  -C1 y C2: Vectores con los alumnos presentados en primera y segunda convocatoria. Ya se han reservado y rellenado en el main.
-  -LP: Lista de alumnos presentados a alguna de las convocatorias.
-  -VALOR DEVUELTO: La función devolverá el número de alumnos de la lista LP.
+/*Ejercicio 2: Recursividad
+    -nEle: número de elementos de V1 y V2.
+    -V1, V2, VR: Los dos vectores a mezclar y el vector resultado, 
+         respectivamente. Estos vectores ya están reservados en el main.
 
 /*------------------------------------------------------------------*/
 
-int ejercicio3(int nEle1, int nEle2, struct datos* C1, struct datos* C2, struct lista ** LP)
+void ejercicio2(int nEle, int* V1, int* V2, int* VR)
 {
-  //INCLUYE AQUI EL CODIGO NECESARIO PARA RESOLVER EL EJERCICIO
+   //INCLUYE AQUI LA LLAMADA A TU FUNCIÓN RECURSIVA 
   
-  //RECUERDA HACER EL RETURN
 }
 
 //ESCRIBE AQUÍ TU FUNCION RECURSIVA Y TODAS LAS FUNCIONES QUE CONSIDERES NECESARIAS
+

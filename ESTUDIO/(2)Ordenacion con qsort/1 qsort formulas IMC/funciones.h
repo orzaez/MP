@@ -13,5 +13,8 @@ struct datos
 void ejercicio1(int nEle, struct datos* Vector, int criterio);
 
 //INCLUYE AQUI LOS PROTOTIPOS DE TUS FUNCIONES
+int imcAsc (const void * e1, const void * e2);
+int nombreDes(const void * e1,const void * e2);
+
 
 #endif
