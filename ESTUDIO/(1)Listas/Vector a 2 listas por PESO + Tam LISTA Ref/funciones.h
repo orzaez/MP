@@ -22,5 +22,7 @@ struct lista * nuevoElemento();
 void insertarDetras(struct lista ** LISTA2, struct dato v);
 void insertarDelante(struct lista ** LISTA2, struct dato v);
 int contarElementos(struct lista * LISTA1);
+int calcularTamlista(struct lista * LISTA);
+
 void vector_a_lista(int * tam1, int * tam2, struct dato * VECTOR, int NUMELEMENTOS, struct lista ** LISTA1,  struct lista ** LISTA2, float PESO);
 #endif

@@ -16,7 +16,7 @@ struct dato * ejercicio(struct dato * v1,struct dato * v2,int tam1, int tam2, in
 struct dato * reservaMemoria(int tam);
 void unirVectores(struct dato * v1, struct dato * v2,int tam1, int tam2,struct dato * unido);
 //void ordenaVector(struct dato * v, int tam);
-int ordenaVector(const void * e1, const void * e2);
+int ordenarVector(const void * e1, const void * e2);
 
 
 #endif

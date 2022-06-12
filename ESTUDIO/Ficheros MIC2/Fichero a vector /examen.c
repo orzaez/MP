@@ -56,7 +56,6 @@ int contarRegistros(char * nombreFichNotas){
 	}
 	fclose(f);
 	return cont;
-	printf("cont=%d\n",cont);
 
 }
 void fichero_a_vector (char * nombreFichAlumnos, char * nombreFichNotas, struct alumno * v){
@@ -72,8 +71,8 @@ void fichero_a_vector (char * nombreFichAlumnos, char * nombreFichNotas, struct 
 	}
 	struct alumno a;
     float nota1, nota2, nota3;    
-
 	int i =0;
+	
 	while(fgets(a.nombre, MAXLINEA,f)){
 		a.nombre[strlen(a.nombre)-1]='\0';
 		fscanf(f,"%ld\n",&a.dni);

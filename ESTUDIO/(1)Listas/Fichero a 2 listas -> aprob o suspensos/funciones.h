@@ -19,11 +19,8 @@ struct lista
 int ejercicio(char * fichero, struct lista ** aprobados, struct lista ** suspensos);
 
 //COMPLETA AQUÍ CON LOS PROTOTIPOS
-struct lista * nuevoElemento();
-void insertarDetras(struct lista ** ls, struct alumno a);
-int contarElementos(struct lista * LS);
 void fichero_a_lista(char * fichero, struct lista ** aprobados, struct lista ** suspensos);
-
-
-
+struct lista * nuevoElemento();
+void insertarDetras(struct lista ** LISTA, struct alumno a);
+int contarElementos(struct lista * LISTA);
 #endif

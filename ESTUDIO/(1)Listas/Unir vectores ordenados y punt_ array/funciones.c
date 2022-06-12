@@ -1,6 +1,12 @@
 /*
     www.academiamain.es
     605 45 70 99 (Ángel)
+     //COMPLETA CAMBIANDO EL RETURN
+    (*tam) = tam1 + tam2;
+    struct dato * result = reservaMemoria(tam1+tam2);
+    unirVectores(v1,v2,tam1,tam2,result);
+    qsort((struct dato*)result,*tam, sizeof(struct dato),&ordenaVector);
+    return result;
 */
 #include "funciones.h"
 #include <stdio.h>
@@ -18,50 +24,46 @@
     por nombre.
 */
 
+
 struct dato * ejercicio(struct dato * v1,struct dato * v2,int tam1, int tam2, int * tam)
 {
-    //COMPLETA CAMBIANDO EL RETURN
-    (*tam) = tam1 + tam2;
-    struct dato * result = reservaMemoria(tam1+tam2);
-    unirVectores(v1,v2,tam1,tam2,result);
+    (*tam)=tam1+tam2;
+    struct dato * unido = reservaMemoria(tam1+tam2);
+    unirVectores(v1,v2,tam1,tam2,unido);
+    qsort((struct dato *)unido,*tam,sizeof(struct dato),&ordenarVector);
+    return unido;
     //ordenarVector(result,tam1+tam2);
-    qsort((struct dato*)result,*tam, sizeof(struct dato),&ordenaVector);
-    return result;
 }
 
-//SUPONGO QUE TENDRE QUE SERVAR MEMORIA PORQUE VOY A GUARDAR DATOS EN OTRO VECTOR
 struct dato * reservaMemoria(int tam){
-    struct dato * v = NULL;
-    v = (struct dato *)malloc(sizeof(struct dato)*tam);
-    if (v == NULL){
-        printf("Error al reservar memoria\n");
+    struct dato * unido = NULL;
+    unido = (struct dato*)malloc(sizeof(struct dato)*tam);
+    if ( unido == NULL ){
+        printf("Error");
         exit(-1);
     }
-    return v;
+    return unido;
 }
-//COMO TENGO QUE UNIR DOS VECTORES, HAGO LA FUNCION QUE LOS UNA
-void unirVectores(struct dato * v1, struct dato * v2, int tam1, int tam2,struct dato * resultado){
-    for (size_t i = 0; i<tam1; i++){
-        resultado [i] = v1[i];
-    }
-    for (size_t i = 0; i<tam2; i++){
-        resultado [tam1+i] = v2[i];
-    }
 
+void unirVectores(struct dato * v1, struct dato * v2, int tam1, int tam2,struct dato * unido){
+    for (int i =0; i<tam1; i++){
+        unido[i]=v1[i];
+    }
+    for (int i =0; i<tam2;i++){
+        unido[tam1+i]=v2[i];
+    }
 }
-int ordenaVector(const void * e1, const void * e2){
+
+int ordenarVector(const void * e1, const void * e2){
     struct dato * a;
     struct dato * b;
-    a = (struct dato*)e1;
-    b = (struct dato*)e2;
-    //return strcmp(a->nombre,b->nombre);
-    if(strcmp(a->nombre,b->nombre)>0){
+    a =(struct dato*)e1;
+    b =(struct dato*)e2;
+    if (strcmp(a->nombre,b->nombre)>0){
         return 1;
     }
     return 0;
 }
-
-
 /*void ordenarVector(struct dato * v, int tam){
     for (size_t i = 0; i < tam; i++)
     {
