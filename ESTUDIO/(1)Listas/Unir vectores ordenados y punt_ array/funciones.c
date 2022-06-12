@@ -24,7 +24,8 @@ struct dato * ejercicio(struct dato * v1,struct dato * v2,int tam1, int tam2, in
     (*tam) = tam1 + tam2;
     struct dato * result = reservaMemoria(tam1+tam2);
     unirVectores(v1,v2,tam1,tam2,result);
-    ordenarVector(result,tam1+tam2);
+    //ordenarVector(result,tam1+tam2);
+    qsort((struct dato*)result,*tam, sizeof(struct dato),&ordenaVector);
     return result;
 }
 
@@ -48,7 +49,20 @@ void unirVectores(struct dato * v1, struct dato * v2, int tam1, int tam2,struct 
     }
 
 }
-void ordenarVector(struct dato * v, int tam){
+int ordenaVector(const void * e1, const void * e2){
+    struct dato * a;
+    struct dato * b;
+    a = (struct dato*)e1;
+    b = (struct dato*)e2;
+    //return strcmp(a->nombre,b->nombre);
+    if(strcmp(a->nombre,b->nombre)>0){
+        return 1;
+    }
+    return 0;
+}
+
+
+/*void ordenarVector(struct dato * v, int tam){
     for (size_t i = 0; i < tam; i++)
     {
         for (size_t j = i+1; j < tam; j++)
@@ -62,4 +76,4 @@ void ordenarVector(struct dato * v, int tam){
         }
         
     }
-}
+}*/

@@ -18,8 +18,7 @@
 	VALOR DEVUELTO: Vector de struct alumno que debes reservar y rellenar con los datos de los ficheros.
 */
 /*------------------------------------------------------------------*/
-struct alumno* apartado1(int* nEle, char* nombreFichAlumnos, char* nombreFichNotas)
-{
+struct alumno* apartado1(int* nEle, char* nombreFichAlumnos, char* nombreFichNotas){
 	//INCLUYE AQUI EL CODIGO NECESARIO PARA RESOLVER EL EJERCICIO
   	//NO TE OLVIDES DE HACER EL RETURN
 	//NI DE DEVOLVER POR REFERENCIA EL NUMERO DE ELEMENTOS DEL VECTOR

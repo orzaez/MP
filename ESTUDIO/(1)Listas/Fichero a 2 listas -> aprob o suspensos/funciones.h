@@ -20,9 +20,9 @@ int ejercicio(char * fichero, struct lista ** aprobados, struct lista ** suspens
 
 //COMPLETA AQUÍ CON LOS PROTOTIPOS
 struct lista * nuevoElemento();
-void encolar(struct lista ** ls, struct alumno a);
+void insertarDetras(struct lista ** ls, struct alumno a);
 int contarElementos(struct lista * LS);
-void fichero_a_listas(char * fichero, struct lista ** aprobados, struct lista ** suspensos);
+void fichero_a_lista(char * fichero, struct lista ** aprobados, struct lista ** suspensos);
 
 
 

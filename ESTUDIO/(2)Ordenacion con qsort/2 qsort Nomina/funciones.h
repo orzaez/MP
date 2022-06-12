@@ -13,8 +13,10 @@ struct nomina
 void ejercicio1(int nEle, struct nomina* Vector, int criterio);
 
 //INCLUYE AQUI LOS PROTOTIPOS DE TUS FUNCIONES
-int nominaAsc(const void *e1, const void *e2);
-int nombreDesc(const void *e1, const void *e2);
+int salarioNetoAsc(const void * e1, const void * e2);
+
+int nombreDesc(const void * e1, const void * e2);
+
 
 
 
