@@ -1,0 +1,8 @@
+Nombre: pedro picapiedra
+ Caché: 1181376512
+ Humano: 1
+ Color: naranja
+Nombre: abeja maya
+ Caché: 1148846080
+ Humano: 0
+ Color: amarilla
